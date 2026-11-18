@@ -2,7 +2,7 @@
  const hero=document.querySelector('.hero');if(!hero)return;
  hero.classList.add('reference-port');
  document.addEventListener('DOMContentLoaded',()=>{hero.querySelector('#heroCard').innerHTML='<img src="assets/food-hero.webp" alt="Food sourcing"><div><strong>Global sourcing</strong><small>Supplier relationships across key markets.</small><a href="#sourcing" aria-label="Explore global sourcing">Explore →</a></div>'},{once:true});
- const bg=hero.querySelector('.plate');bg.src='assets/reference-port.webp';bg.alt='Container cranes and a cargo vessel at a Bangladesh-inspired port at dusk';
+ const bg=hero.querySelector('.plate');bg.src='assets/reference-port-dawn.webp';bg.alt='Sun rising over container cranes and a cargo vessel at a Bangladesh-inspired port';
  const canvas=document.createElement('canvas');canvas.className='reference-water';canvas.setAttribute('aria-hidden','true');hero.prepend(canvas);
  const truck=document.createElement('div');truck.className='reference-truck';truck.innerHTML='<img src="assets/reference-truck.webp" alt="Axle Enterprise truck carrying packaged food products">';hero.append(truck);
  for(const [x,y,w,h] of [[650,674,66,94],[1000,657,54,82],[1554,634,48,72],[1644,627,48,73],[1733,621,44,70]]){const tire=document.createElement('span');tire.className='reference-wheel';tire.style.cssText=`left:${x/1994*100}%;top:${y/789*100}%;width:${w/1994*100}%;height:${h/789*100}%;--wheel-bg:${(x-w/2)/(1994-w)*100}% ${(y-h/2)/(789-h)*100}%;--wheel-size:${1994/w*100}% ${789/h*100}%`;tire.innerHTML='<i></i>';truck.append(tire)}

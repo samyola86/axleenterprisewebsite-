@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+  <defs>
+    <pattern id="maze" width="183.84776" height="183.84776" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <g fill="none" stroke="#163e32" stroke-width="1.05" stroke-linejoin="miter">
+        <path d="M0 0H91.924V91.924H0Z M0 91.924H91.924V183.848H0Z M91.924 0H183.848V91.924H91.924Z M91.924 91.924H183.848V183.848H91.924Z"/>
+        <path d="M11.5 91.924V11.5H80.424V80.424H23V23H68.924V68.924H34.5V34.5H57.424V57.424H46"/>
+        <path d="M172.348 91.924V172.348H103.424V103.424H160.848V160.848H114.924V114.924H149.348V149.348H126.424V126.424H137.924"/>
+        <rect x="103.424" y="11.5" width="68.924" height="68.924"/><rect x="114.924" y="23" width="45.924" height="45.924"/><rect x="126.424" y="34.5" width="22.924" height="22.924"/>
+        <rect x="11.5" y="103.424" width="68.924" height="68.924"/><rect x="23" y="114.924" width="45.924" height="45.924"/><rect x="34.5" y="126.424" width="22.924" height="22.924"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="260" height="260" fill="url(#maze)"/>
+</svg>
