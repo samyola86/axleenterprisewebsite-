@@ -1,0 +1,51 @@
+.hero.reference-port{height:calc(100svh - 10px);min-height:650px;max-height:none;border:1px solid #20c69a;border-radius:24px;background:#03262b;isolation:isolate;overflow:hidden;color:#fff;}
+.reference-port .plate{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;transform:none!important;scale:1!important;animation:none!important;z-index:-3;}
+.reference-port:after{z-index:-1;background:linear-gradient(180deg,#001e2455,transparent 45%,transparent 70%,#001719d9 100%);pointer-events:none;}
+.reference-port header{position:relative;z-index:5;padding:2.7% 3.3% 0 6%;font-size:clamp(12px,1vw,18px);}
+.reference-port header .nav{gap:3vw;white-space:nowrap;}
+.reference-port header .logo{width:clamp(140px,13vw,235px);background:transparent;padding:0;}
+.reference-port header .header-cta{border:1px solid #25bd92;padding:.8em 1.5em;border-radius:999px;background:#072f31a0;text-transform:none;letter-spacing:0;font-size:inherit;}
+.reference-port .header-cta:after{content:' →';color:#52e3a1;margin-left:.6em;}
+.reference-port .burger{display:none;}
+.reference-port h1{position:absolute;left:5.6%;top:19.4%;padding:0;font-size:clamp(3.5rem,5.8vw,7.8rem);line-height:.98;letter-spacing:-.048em;max-width:63%;z-index:3;text-shadow:0 4px 25px #00222988;}
+.reference-port h1 .mask{display:block;overflow:visible;padding:0;}
+.reference-port h1:after{content:'';display:block;width:14%;height:5px;background:#2acf76;border-radius:3px;margin-top:3%;transform-origin:left;animation:accent-in 1s 1s both;}
+@keyframes accent-in{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+.reference-port .mask i{transform:translateY(23px);opacity:0;transition:transform 1.2s ease,opacity 1.4s ease;}
+.ready .reference-port .mask i{transform:none;opacity:1;}
+.reference-water{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none;}
+.reference-truck{position:absolute;right:0.5%;width:45%;bottom:23.8%;z-index:1;pointer-events:none;transform-origin:50% 100%;will-change:transform;}
+.reference-truck img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 6px 4px #001013bb);}
+.reference-truck:after{content:'';position:absolute;left:5%;right:3%;height:7%;bottom:-1%;z-index:-1;background:radial-gradient(ellipse,#001719c7,transparent 72%);filter:blur(4px);}
+.reference-truck{transform:translateX(110%);}
+.ready .reference-truck{animation:truck-park 5.6s .65s cubic-bezier(.12,.65,.2,1) both;}
+.reference-wheel{position:absolute;translate:-50% -50%;overflow:hidden;border-radius:50%;pointer-events:none;}
+.reference-wheel i{display:block;width:100%;height:100%;border-radius:50%;background:url('reference-truck.webp') var(--wheel-bg)/var(--wheel-size) no-repeat;opacity:0;}
+.ready .reference-wheel i{animation:reference-wheel-roll 5.6s .65s cubic-bezier(.12,.65,.2,1) both;}
+@keyframes reference-wheel-roll{0%{transform:scaleY(.75) rotate(1440deg) scaleY(1.333);opacity:1}99%{opacity:1}100%{transform:none;opacity:0}}
+@keyframes truck-park{0%{transform:translateX(110%) scale(.96)}100%{transform:translateX(0) scale(1)}}
+.reference-leaf{position:absolute;top:-3%;left:-8%;width:25%;z-index:2;pointer-events:none;transform-origin:10% 0;filter:brightness(.48) saturate(.8) blur(.6px);animation:breeze 4.8s ease-in-out infinite alternate;}
+@keyframes breeze{from{transform:rotate(-3deg) translateX(-1%)}to{transform:rotate(4deg) translateX(2%)}}
+.reference-map{position:absolute;top:8.8%;right:1%;width:49%;height:36%;pointer-events:none;z-index:1;opacity:.9;}
+.reference-map text{fill:#f0f7f5;font:11px Onest,Arial,sans-serif;letter-spacing:1.4px;}
+.reference-map .route{fill:none;stroke:#8deccd;stroke-width:1.1;opacity:.65;stroke-dasharray:6 3;animation:route-flow 10s linear infinite;}
+.reference-map .node{fill:#b8ffdd;filter:drop-shadow(0 0 5px #66f8d4);animation:node-pulse 3s ease-in-out infinite alternate;}
+@keyframes route-flow{to{stroke-dashoffset:-90}}@keyframes node-pulse{to{opacity:.45}}
+.reference-port .hero-bottom{position:absolute;bottom:4.6%;left:5.8%;right:2.7%;padding:0;z-index:4;align-items:end;gap:2%;}
+.reference-port .hero-tag{max-width:42%;}
+.reference-port .hero-tag h2{font-size:clamp(24px,2.3vw,42px);line-height:1;letter-spacing:-.035em;text-transform:none;color:white;}
+.reference-port .hero-tag p{font-size:clamp(11px,.93vw,16px);max-width:29em;margin-top:.6em;color:#e1eae7;}
+.reference-port .bd-signature{font-size:clamp(9px,.75vw,13px);margin-bottom:.7em;}
+.reference-port .hero-cluster{display:flex;width:49%;gap:3%;align-items:stretch;}
+.reference-port .hero-cluster>div{flex:1;min-width:0;}
+.reference-port .hero-cluster .glass{height:100%;width:100%;padding:12px;gap:12px;border-radius:15px;background:#133b38b5;border:1px solid #b5d8ca70;backdrop-filter:blur(12px);display:flex;align-items:center;}
+.reference-port .glass.contact{flex:1;flex-direction:row-reverse;justify-content:start;}
+.reference-port .glass img{width:34%;height:clamp(46px,4.6vw,82px);border-radius:7px;object-fit:cover;}
+.reference-port .glass strong{font-size:clamp(12px,1.05vw,19px);color:#fff;}
+.reference-port .glass small{font-size:clamp(10px,.82vw,14px);line-height:1.35;color:#dae9e3;}
+.reference-port .glass a,.reference-port .glass button{font-size:12px;color:#70dda5;text-transform:none;text-decoration:none;}
+.reference-port #heroDots,.reference-port .film-index,.reference-port .scroll-cue{display:none;}
+@media(max-width:760px){.hero.reference-port{min-height:680px;height:calc(100svh - 12px);border-radius:18px;}.reference-port .plate{object-fit:cover;object-position:57% center;}.reference-port header{padding:22px 18px 0;}.reference-port header .logo{width:140px;}.reference-port header .header-cta{display:none;}.reference-port .burger{display:grid;}.reference-port h1{left:6%;top:18%;font-size:10vw;max-width:95%;}.reference-map{width:75%;top:34%;height:21%;right:-3%;}.reference-truck{width:92%;right:4%;bottom:26%;}.reference-leaf{width:48%;left:-17%;top:-5%;}.reference-port .hero-bottom{left:6%;right:6%;bottom:5%;}.reference-port .hero-tag{max-width:100%;}.reference-port .hero-tag h2{font-size:28px;}.reference-port .hero-tag p{font-size:13px;}.reference-port .hero-cluster{display:none;}}
+@media(prefers-reduced-motion:reduce){.reference-port *, .reference-port *:after{animation:none!important;transition:none!important;}.reference-truck,.reference-port .mask i{opacity:1!important;transform:none!important;}.reference-water{display:none;}}
+/* Mobile: park fully inside the lane, clear of the riverside barrier. */
+@media(max-width:760px){.reference-truck{bottom:21%;}}
