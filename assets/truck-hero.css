@@ -1,0 +1,92 @@
+.hero.drive-hero{min-height:660px;isolation:isolate;background:#173e48}
+.drive-hero .plate,.ready .drive-hero .plate{inset:0;height:100%;width:100%;object-position:center 70%;animation:none;scale:1;transform:none!important;transition:none;will-change:auto}
+.drive-hero:after{z-index:-1;background:linear-gradient(180deg,#06192dbb 0%,#06192d66 24%,transparent 58%,#071c30a8 88%,#07182de8)}
+.drive-hero header{position:relative;z-index:5}
+.drive-hero .film-index{display:none}
+.drive-hero .hero-bottom{position:relative;z-index:4;padding-bottom:1.65rem;align-items:end}
+.drive-hero .hero-tag h2{font-size:clamp(1.3rem,2.2vw,2.3rem)}
+.drive-hero .hero-tag p{margin-top:.45rem;font-size:.8rem}
+.drive-hero .bd-signature{margin-bottom:.45rem}
+.drive-hero .scroll-cue{display:none}
+.drive-lane{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.drive-hero .drive-title{position:absolute;top:16%;left:4%;padding:0;width:92%;max-width:none;font-size:clamp(3rem,8.1vw,10rem);line-height:.91;letter-spacing:-.065em;filter:drop-shadow(0 3px 18px #12263899);transform:translateX(-115vw);opacity:0;will-change:transform}
+.drive-hero .drive-title .mask{overflow:visible;padding:0 0 .1em}
+.drive-hero .drive-title .mask i{transform:none!important;opacity:1!important;transition:none}
+.drive-truck{position:absolute;display:block;width:clamp(350px,65%,1100px);right:3.5%;bottom:19%;height:auto;object-fit:contain;transform:translateX(-130vw);opacity:0;filter:drop-shadow(0 19px 10px #081a2890);will-change:transform}
+.ready .drive-hero.drive-loaded .drive-truck{animation:truck-arrive 3.8s cubic-bezier(.14,.69,.23,1) both}
+.ready .drive-hero.drive-loaded .drive-title{animation:title-travel 3.5s .28s cubic-bezier(.14,.69,.23,1) both}
+@keyframes truck-arrive{0%{transform:translateX(-130vw);opacity:1}100%{transform:translateX(0);opacity:1}}
+@keyframes title-travel{0%{transform:translateX(-115vw);opacity:0}12%{opacity:1}100%{transform:translateX(0);opacity:1}}
+.drive-replay{position:absolute;z-index:6;right:2rem;top:6.5rem;border:1px solid #ffffff60;border-radius:100px;padding:.6rem .9rem;color:white;background:#0a1c32a0;cursor:pointer;font:inherit;font-size:.72rem;letter-spacing:.04em;backdrop-filter:blur(10px)}
+.drive-replay:hover,.drive-replay:focus-visible{background:#3048f7}
+@media(max-width:800px){.hero.drive-hero{min-height:620px}.drive-hero .drive-title{top:22%;font-size:11vw;left:5%;width:90%}.drive-truck{width:90%;right:4%;bottom:23%;min-width:0}.drive-replay{top:5.3rem;right:1.25rem}.drive-hero .hero-bottom{padding-bottom:1.8rem}.drive-hero .hero-tag p{max-width:24rem}}
+@media(prefers-reduced-motion:reduce){.ready .drive-hero.drive-loaded .drive-truck,.ready .drive-hero.drive-loaded .drive-title,.drive-hero .drive-title,.drive-truck{animation:none;transform:none;opacity:1}.drive-replay{display:none}}
+
+/* Wheel layers use the original photographic tires, registered to their axle centers. */
+.drive-truck{aspect-ratio:1600/533;filter:drop-shadow(0 12px 7px #081a2880)}
+.drive-truck-body{display:block;width:100%;height:100%;object-fit:contain}
+.drive-wheel{position:absolute;width:10.2%;aspect-ratio:1;top:84.2%;translate:-50% -50%;border-radius:50%;background-image:url('baby-food-truck.webp');background-size:980.392% auto;background-repeat:no-repeat;pointer-events:none;will-change:transform;transform:rotate(0deg)}
+.drive-wheel.rear-one{left:20.05%;background-position:16.65% 99.15%}.drive-wheel.rear-two{left:31.45%;background-position:29.34% 99.15%}.drive-wheel.front{left:85.42%;background-position:89.44% 99.15%}
+.ready .drive-hero.drive-loaded .drive-wheel{animation:wheel-roll 3.8s cubic-bezier(.14,.69,.23,1) both}
+@keyframes wheel-roll{from{transform:rotate(var(--wheel-start,-1440deg))}to{transform:rotate(0deg)}}
+.port-ambient{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.port-ship{position:absolute;width:32%;height:auto;left:100%;bottom:31%;opacity:.91;filter:saturate(.82) brightness(.88) drop-shadow(0 6px 5px #122e4566);animation:ship-sail 48s linear infinite;animation-delay:-27s;will-change:transform}
+@keyframes ship-sail{from{transform:translateX(10vw)}to{transform:translateX(-146vw)}}
+.port-water{position:absolute;left:0;right:0;top:51%;height:20%;opacity:.17;background:repeating-linear-gradient(175deg,transparent 0 9px,#ebf5ff40 10px,transparent 12px 28px);mask-image:linear-gradient(transparent,#000 40%,#000 70%,transparent);animation:water-drift 7s ease-in-out infinite alternate}
+@keyframes water-drift{from{transform:translateX(-2%) scaleX(1.06);opacity:.08}to{transform:translateX(2%) scaleX(1.06);opacity:.19}}
+.port-birds{position:absolute;top:20%;left:-12%;width:8rem;height:3rem;animation:bird-flight 35s -10s linear infinite;opacity:.65}
+.port-birds i{position:absolute;width:13px;height:7px;transform:rotate(-8deg)}.port-birds i:before,.port-birds i:after{content:'';position:absolute;width:8px;height:5px;top:0;border-top:2px solid #132632;border-radius:60%;transform-origin:right;animation:wingbeat .9s ease-in-out infinite alternate}.port-birds i:after{left:6px;transform-origin:left;animation-name:wingbeat-right}.port-birds i:nth-child(2){left:36px;top:18px;scale:.78}.port-birds i:nth-child(3){left:60px;top:5px;scale:.9}.port-birds i:nth-child(4){left:100px;top:29px;scale:.65}
+@keyframes wingbeat{from{rotate:-23deg}to{rotate:23deg}}@keyframes wingbeat-right{from{rotate:23deg}to{rotate:-23deg}}@keyframes bird-flight{from{transform:translate(0,0)}to{transform:translate(120vw,-6vh)}}
+.port-pause{position:absolute;z-index:6;right:2rem;top:9.2rem;border:1px solid #ffffff60;border-radius:100px;padding:.6rem .9rem;color:white;background:#0a1c32a0;cursor:pointer;font:inherit;font-size:.72rem;backdrop-filter:blur(10px)}
+.port-pause:hover,.port-pause:focus-visible{background:#3048f7}.ambient-paused .port-ambient,.ambient-paused .port-ambient *,.ambient-paused .port-ambient *:before,.ambient-paused .port-ambient *:after{animation-play-state:paused!important}
+@media(max-width:800px){.port-ship{width:55%;bottom:34%}.port-pause{top:7.85rem;right:1.25rem}.port-birds{top:17%}}
+@media(prefers-reduced-motion:reduce){.ready .drive-hero.drive-loaded .drive-wheel,.port-ambient,.port-ambient *,.port-ambient *:before,.port-ambient *:after{animation:none!important}.port-ship{left:13%}.port-birds,.port-pause{display:none}}
+
+/* Ground the vehicle in the centre of the foreground asphalt lane. */
+.drive-hero:after{background:linear-gradient(180deg,#071b2c9c 0%,#071b2c36 26%,transparent 58%,#13263824 80%,#07182dca 100%)}
+.drive-truck{bottom:var(--road-bottom,10%);width:clamp(350px,63%,1050px);filter:none;isolation:isolate}
+.drive-truck:before{content:'';position:absolute;z-index:-1;left:2%;right:-3%;bottom:-1.5%;height:11%;background:radial-gradient(ellipse at 50% 48%,#101b24bc 0%,#101b247d 33%,#101b2434 56%,transparent 72%);filter:blur(3px);transform:skewX(-16deg)}
+.drive-truck-body,.drive-wheel{filter:brightness(.88) saturate(.79) contrast(.95)}
+.drive-wheel{width:10.13%;top:84.67%;background-image:url('modern-food-truck.webp');background-size:987.17% auto}
+.drive-wheel.rear-one{left:21.64%;background-position:18.44% 99.8%}.drive-wheel.rear-two{left:34.39%;background-position:32.63% 99.8%}.drive-wheel.front{left:85.31%;background-position:89.3% 99.8%}
+.drive-wheel:after{content:'';position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 4px #07172320}
+.drive-hero .hero-bottom{padding-bottom:.65rem}
+.drive-hero .hero-cluster{gap:.6rem;align-items:end}
+.drive-hero .hero-cluster .glass{padding:.42rem .55rem;gap:.5rem;border-radius:.9rem;width:15rem;background:#0b1c2b9c}
+.drive-hero .hero-cluster .glass img{width:2.8rem;height:2.8rem;border-radius:.5rem}
+.drive-hero .hero-cluster .glass small{margin:.1rem 0;font-size:.66rem}
+.drive-hero .hero-cluster .dots{padding:.2rem}
+.drive-hero .hero-tag{padding-bottom:.65rem;max-width:29%}
+.drive-hero .hero-tag h2{font-size:clamp(1.2rem,1.85vw,2rem)}
+.port-ship{filter:saturate(.74) brightness(.9) contrast(.92);opacity:.94}
+@media(max-width:800px){.drive-truck{width:88%;right:5%;min-width:0}.drive-hero .hero-tag{position:absolute;left:5%;bottom:30%;max-width:85%;padding:0}.drive-hero .hero-tag h2{font-size:1.4rem}.drive-hero .hero-bottom{position:absolute;inset:0;pointer-events:none}.drive-hero .hero-tag p{font-size:.78rem;max-width:22rem}}
+
+/* Cinematic tracking shot: the landscape, river, truck and near foliage
+   have independent motions, with a camera move shared by the physical scene. */
+.port-camera{position:absolute;inset:0;z-index:-2;isolation:isolate;overflow:hidden;transform:scale(1.04)}
+.port-world{position:absolute;inset:0;isolation:isolate;transform:translateX(0) scale(1.03);animation:port-breathe 24s ease-in-out infinite alternate;will-change:transform}
+.ready .drive-hero.drive-loaded .port-camera{animation:camera-follow 6.2s cubic-bezier(.2,.65,.25,1) both}
+@keyframes camera-follow{from{transform:translateX(2.9%) scale(1.12)}to{transform:translateX(0) scale(1.04)}}
+@keyframes port-breathe{from{transform:translateX(-.6%) scale(1.025)}to{transform:translateX(.6%) scale(1.045)}}
+.water-live{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;image-rendering:auto}
+.port-haze{position:absolute;left:-25%;top:35%;width:150%;height:30%;background:radial-gradient(ellipse at 24% 45%,#e6c8a33b,transparent 52%);mix-blend-mode:screen;filter:blur(22px);animation:port-haze-drift 19s ease-in-out infinite alternate}
+@keyframes port-haze-drift{from{transform:translateX(-5%);opacity:.45}to{transform:translateX(9%);opacity:.88}}
+.port-foreground{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.port-foreground img{position:absolute;object-fit:contain;will-change:transform;filter:brightness(.66) saturate(.8) blur(.7px)}
+.leaf-near{width:32%;top:-8%;left:-14%;transform-origin:0 0;animation:leaf-sway 5.2s ease-in-out infinite alternate}
+.leaf-far{width:23%;bottom:-12%;left:-9%;transform-origin:0 100%;animation:leaf-sway-low 6.8s ease-in-out infinite alternate;filter:brightness(.49) saturate(.8) blur(1.5px)!important;opacity:.9}
+@keyframes leaf-sway{from{transform:translateX(-2%) rotate(-4deg) scale(1.01)}to{transform:translateX(3%) rotate(4deg) scale(1.045)}}
+@keyframes leaf-sway-low{from{transform:rotate(5deg) translateX(-2%)}to{transform:rotate(-5deg) translateX(3%)}}
+.drive-hero:after{background:linear-gradient(180deg,#0b203b7d 0%,#0b203b40 28%,transparent 55%,#07182d18 80%,#07182d9e 100%)}
+.drive-hero .drive-title{transform:translateY(28px);opacity:0;z-index:2;will-change:transform,opacity}
+.ready .drive-hero.drive-loaded .drive-title{animation:headline-in 1.4s .25s cubic-bezier(.16,1,.3,1) both}
+@keyframes headline-in{0%{transform:translateY(38px);opacity:0;filter:blur(8px)}100%{transform:translateY(0);opacity:1;filter:drop-shadow(0 3px 18px #12263899)}}
+.ready .drive-hero.drive-loaded .drive-truck{animation:truck-arrive 6.2s cubic-bezier(.27,.58,.3,1) both}
+.ready .drive-hero.drive-loaded .drive-wheel{animation:wheel-roll 6.2s cubic-bezier(.27,.58,.3,1) both}
+.drive-truck:before{bottom:-1.4%;height:13%;background:radial-gradient(ellipse at 50% 50%,#121a22d9 0%,#121a2299 33%,#121a2230 62%,transparent 77%);filter:blur(2px)}
+.ambient-paused .port-camera,.ambient-paused .port-world,.ambient-paused .port-foreground *,.ambient-paused .drive-truck,.ambient-paused .drive-wheel,.ambient-paused .drive-title{animation-play-state:paused!important}
+@media(max-width:800px){.leaf-near{width:55%;left:-24%;top:-5%}.leaf-far{width:42%;left:-19%;bottom:-8%}.port-world{animation-duration:30s}}
+@media(prefers-reduced-motion:reduce){.port-camera,.ready .drive-hero.drive-loaded .port-camera,.port-world,.port-foreground img,.ready .drive-hero.drive-loaded .drive-truck,.ready .drive-hero.drive-loaded .drive-wheel,.ready .drive-hero.drive-loaded .drive-title{animation:none!important;transform:none;opacity:1}.water-live{display:none}}
+.drive-truck{right:7%;width:clamp(350px,60%,1000px)}
+.leaf-near{width:40%;left:-16%;top:-9%}
+@media(max-width:800px){.drive-truck{width:83%;right:8%;min-width:0}.leaf-near{width:55%;left:-24%;top:-5%}}

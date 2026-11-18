@@ -1,0 +1,40 @@
+:root{--background:#f8f5eb;--ink:#123d30;--brand:#239b68;--brand-deep:#123d30;--brand-light:#239b68;--surface:#efeee0;--soft:#5c7164;--ghost:#d7dfce;--line:#d9e3d3;--lime:#d7ed9e;--gold:#e7b85a}
+html.booting{scroll-behavior:auto!important}
+body{background:var(--background)}
+.dark{background:var(--brand-deep)}
+.dark .eyebrow:before{background:var(--lime)}
+.pill,.contact-inquiry .pill{background:var(--brand-deep);color:#fff}
+.pill:hover,.contact-inquiry .pill:hover{background:#196747;color:#fff}
+.pill.light,.dark .pill{background:var(--lime);color:var(--brand-deep)}
+.pill.light:hover,.dark .pill:hover{background:#e7f7bc;color:var(--brand-deep)}
+.hero.drive-hero{background:#294c39}
+.drive-hero:after{background:linear-gradient(180deg,#102e24a8 0%,#16392b50 28%,transparent 54%,#122f231c 77%,#102d24ba 100%)}
+.drive-hero .hero-cluster .glass{background:#123d30a8;border-color:#e6efd24d}
+.hero .logo{filter:url(#axle-logo-dark) drop-shadow(0 3px 12px #0c251cba) drop-shadow(0 0 14px #d7ed9e35)}
+.drive-replay,.port-pause{background:#123d30c0}
+.drive-replay:hover,.drive-replay:focus-visible,.port-pause:hover,.port-pause:focus-visible{background:var(--brand-deep);color:var(--lime)}
+.film-progress{background:linear-gradient(90deg,var(--brand),var(--lime),var(--gold))}
+.story,.story-stage{background:#123d30}
+.story-stage:after{background:linear-gradient(90deg,#103024df,#123d3070 55%,#123d3029),linear-gradient(0deg,#102b20c7,transparent 45%)}
+.story-head span:first-child:before{background:var(--lime);box-shadow:0 0 14px var(--lime)}
+.story-copy .story-kicker{color:var(--lime)}
+.story-bar:after,.stat:after{background:var(--lime)}
+.product-row:before{background:#e3edd1}
+.stats{background:radial-gradient(ellipse at var(--stats-x,50%) 0%,#239b687a 0%,transparent 65%),#123d30}
+.partner:hover{background:#e7efd9;box-shadow:0 15px 45px #123d3012}
+.overlay{background:#123d3080}.dialog{background:var(--background)}
+.menu nav a:hover{color:var(--lime)}
+.contact-section{background:linear-gradient(128deg,#e3edce,#f8f5eb 65%,#f2e8ca)}
+.contact-intro .eyebrow{color:#196747}
+.contact-intro h2,.contact-channel a,.contact-channel strong,.contact-inquiry h3{color:var(--brand-deep)}
+.contact-intro>p,.contact-channel span,.contact-inquiry>p,.contact-inquiry label,.contact-inquiry small{color:var(--soft)}
+.contact-channel{border-color:#56745c40}.contact-channel a:hover{color:#196747}
+.contact-inquiry{background:#fffdf6;border-color:var(--line);box-shadow:0 16px 55px #123d301c}
+.contact-inquiry input,.contact-inquiry select,.contact-inquiry textarea{background:#f8f9ef;border-color:var(--line);color:var(--ink)}
+.loader{overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 78% 15%,#79c86d55,transparent 44%),radial-gradient(ellipse at 10% 95%,#e7b85a40,transparent 42%),linear-gradient(135deg,#123d30 0%,#16774d 55%,#239b68 100%);gap:1.4rem}
+.loader:before{content:'';position:absolute;inset:0;z-index:-1;background:repeating-radial-gradient(ellipse at 94% 105%,transparent 0 45px,#d7ed9e0c 46px 47px,transparent 48px 75px);pointer-events:none}
+.loader .logo{width:clamp(12rem,22vw,20rem);filter:url(#axle-logo-dark) drop-shadow(0 5px 20px #0a392c80)}
+.loader .track{height:3px;width:clamp(8rem,16vw,14rem);border-radius:999px;background:#fff4}
+.loader .track:after{background:linear-gradient(90deg,var(--lime),var(--gold));border-radius:999px}
+.loader:after{content:'CONNECTING FOOD MARKETS';font-size:.65rem;letter-spacing:.25em;color:#f8f5ebc9;margin-top:.2rem}
+@media(max-width:640px){#about .badges{display:none}#about.section{padding-top:1.5rem}}
